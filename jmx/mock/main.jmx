@@ -26,7 +26,7 @@
           </elementProp>
           <elementProp name="loopCount" elementType="Argument">
             <stringProp name="Argument.name">loopCount</stringProp>
-            <stringProp name="Argument.value">${__property(loopCount,,1)}</stringProp>
+            <stringProp name="Argument.value">${__property(loopCount,,100)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="duration" elementType="Argument">
@@ -81,9 +81,9 @@
               <stringProp name="1758">75</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-1145576880">
+            <collectionProp name="-1147034562">
               <stringProp name="2117236020">Bad Request</stringProp>
-              <stringProp name="48625">100</stringProp>
+              <stringProp name="1603">25</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
           </collectionProp>
