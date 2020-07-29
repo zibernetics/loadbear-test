@@ -41,17 +41,17 @@
         <collectionProp name="Arguments.arguments">
           <elementProp name="influxDbServer" elementType="Argument">
             <stringProp name="Argument.name">influxDbServer</stringProp>
-            <stringProp name="Argument.value">${__property(influxDbServer,,changeme)} </stringProp>
+            <stringProp name="Argument.value">${__property(influxDbServer,,changeme)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="influxdbToken" elementType="Argument">
             <stringProp name="Argument.name">influxdbToken</stringProp>
-            <stringProp name="Argument.value">${__property(influxdbToken,,changeme)} </stringProp>
+            <stringProp name="Argument.value">${__property(influxdbToken,,changeme)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="influxDbOrgId" elementType="Argument">
             <stringProp name="Argument.name">influxDbOrgId</stringProp>
-            <stringProp name="Argument.value">${__property(influxDbOrgId,,changeme)} </stringProp>
+            <stringProp name="Argument.value">${__property(influxDbOrgId,,changeme)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -76,12 +76,12 @@
       <hashTree>
         <com.blazemeter.jmeter.control.WeightedSwitchController guiclass="com.blazemeter.jmeter.control.WeightedSwitchControllerGui" testclass="com.blazemeter.jmeter.control.WeightedSwitchController" testname="Select Request" enabled="true">
           <collectionProp name="Weights">
-            <collectionProp name="1097970203">
+            <collectionProp name="1572115560">
               <stringProp name="-982100404">Good request</stringProp>
               <stringProp name="1758">75</stringProp>
               <stringProp name="3569038">true</stringProp>
             </collectionProp>
-            <collectionProp name="-1147034562">
+            <collectionProp name="-1542035355">
               <stringProp name="2117236020">Bad Request</stringProp>
               <stringProp name="1603">25</stringProp>
               <stringProp name="3569038">true</stringProp>
