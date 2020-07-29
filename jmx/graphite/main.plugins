@@ -1,0 +1,39 @@
+####################################################################
+# LoadBear sets up a jmeter instance with plugin manager and cli tools available
+# https://jmeter-plugins.org/wiki/PluginsManager/
+# https://jmeter-plugins.org/wiki/PluginsManagerAutomated/
+
+cd /tmp && \
+    wget http://apache.spinellicreations.com/jmeter/binaries/apache-jmeter-5.3.tgz -O jmeter.tgz && \
+    mkdir jmeter && \
+    tar zxvf jmeter.tgz -C jmeter --strip-components=1 && \
+    wget http://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-manager/1.4/jmeter-plugins-manager-1.4.jar -O jmeter/lib/ext/jmeter-plugins-manager-1.4.jar && \
+    wget http://search.maven.org/remotecontent?filepath=kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar -O jmeter/lib/cmdrunner-2.2.jar && \
+    java -cp jmeter/lib/ext/jmeter-plugins-manager-1.4.jar org.jmeterplugins.repository.PluginManagerCMDInstaller && \
+    sudo mv jmeter /jmeter
+
+####################################################################
+# Client config specifies jmx test dependencies that LoadBear will resolve
+# the format of an entry is:
+#   <action>:<parameters>:...
+# where:
+#   action in [ plugin, download, copy ]
+#
+# Configuration details:
+#   plugin:item1,item2, where item are jmeter packages
+#   download:url:install_path, where install path is a path relative to the jmeter folder
+#   copy:file_pattern:install_path, where file_pattern is a pattern or file name relative 
+#       to the source repo (same directory as main.plugins) and install path is a path relative to the jmeter folder
+#
+# Examples:
+# If a Weighted Switch Controller and Dummy Sampler are required ==> /jmeter/bin/PluginsManagerCMD.sh install jpgc-wsc=0.7,jpgc-dummy=0.4
+plugin:jpgc-wsc=0.7,jpgc-dummy=0.4
+
+# If Custom library is required
+download:https://loadbear.io/libs/mylib.jar:lib/ext
+
+# Install a custom library that is local to the test configuration
+copy:*.jar:lib/ext
+
+jmx|graphite-variables.jmx|variables
+jmx|graphite-backend.jmx|listener
