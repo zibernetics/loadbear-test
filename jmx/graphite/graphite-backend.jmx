@@ -69,7 +69,6 @@
         </elementProp>
         <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
       </BackendListener>
-      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
